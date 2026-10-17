@@ -80,7 +80,7 @@ fun HomeScreen(vm: StudioViewModel) {
         }
     }
 
-    Box(Modifier.fillMaxSize().background(BF.Screen)) {
+    Box(Modifier.fillMaxSize().background(brush = BF.Screen)) {
         LazyColumn(
             Modifier.fillMaxSize().statusBarsPadding(),
             contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 20.dp, bottom = 120.dp),
@@ -149,7 +149,7 @@ fun HomeScreen(vm: StudioViewModel) {
 private fun Header() {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Box(
-            Modifier.size(46.dp).clip(RoundedCornerShape(14.dp)).background(BF.Brand),
+            Modifier.size(46.dp).clip(RoundedCornerShape(14.dp)).background(brush = BF.Brand),
             contentAlignment = Alignment.Center
         ) { Icon(Icons.Rounded.GraphicEq, null, tint = Color.White, modifier = Modifier.size(26.dp)) }
         Spacer(Modifier.width(12.dp))
@@ -168,7 +168,7 @@ private fun TemplateCard(t: Template, brush: Brush, onClick: () -> Unit) {
             .width(168.dp)
             .height(126.dp)
             .clip(RoundedCornerShape(22.dp))
-            .background(brush)
+            .background(brush = brush)
             .clickable(onClick = onClick)
             .padding(16.dp)
     ) {
